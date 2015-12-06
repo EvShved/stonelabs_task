@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to:'home#index'
   resources :users
   resources :questions, only: [:show]
+  resources :categories, only: [:index, :show]
 end
