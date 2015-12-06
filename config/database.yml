@@ -8,5 +8,4 @@ default: &default
 
 development:
   <<: *default
-  database: stonelabs_task_development
-
+  database: sl_development
