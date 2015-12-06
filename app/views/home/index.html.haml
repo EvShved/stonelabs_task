@@ -1,1 +1,40 @@
-%h1 star page
+!!!
+%html
+  %head
+    :css
+      table {
+          width:100%;
+      }
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 5px;
+          text-align: left;
+      }
+      table#t01 tr:nth-child(even) {
+          background-color: #eee;
+      }
+      table#t01 tr:nth-child(odd) {
+         background-color:#fff;
+      }
+      table#t01 th  {
+          background-color: black;
+          color: white;
+      }
+  %body
+    %table#t01{:style => "width:100%"}
+      %b
+        %caption Вопросы
+      %tr
+        %th Title
+        %th Context
+      - @questions.each do |question|
+
+        %tr
+          %td= link_to question.title, question_path(question)
+          %td= question.context
+
+
+
