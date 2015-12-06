@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206211034) do
+ActiveRecord::Schema.define(version: 20151206223457) do
+
+  create_table "answers", force: :cascade do |t|
+    t.text    "context",  limit: 65535
+    t.string  "question", limit: 255
+    t.integer "user_id",  limit: 4
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "title",       limit: 255
