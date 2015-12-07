@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'pry-rails'
 
 
 group :development do

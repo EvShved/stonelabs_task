@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users
   resources :questions, only: [:show]
   resources :categories, only: [:index, :show]
+  resources :answers, only: [:new, :create]
 end

@@ -15,4 +15,6 @@
     = @question.context
     %br/
     %br/
-    %button.btn.btn-success{:type => "button"} Answer
+    %br/
+    %button.btn.btn-success
+      = link_to 'Answer', new_answer_path({ question_id: @question.id })

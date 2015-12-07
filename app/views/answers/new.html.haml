@@ -1,0 +1,5 @@
+= simple_form_for @answer do |f|
+  = f.input :context
+  = f.input_field :user_id, type: :hidden, value: current_user.id
+  = f.input_field :question_id, type: :hidden, value: params[:question_id]
+  = f.button :submit, class: 'btn btn-warning'
